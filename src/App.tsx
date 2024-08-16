@@ -7,22 +7,25 @@ function App() {
   return (
     <>
       <h1>カウントしちゃうよ～</h1>
-      
+
       <CountPreview hoge={count} />
-      <button onClick={function(){
+      <button onClick={function () {
         setCount(count + 1)
         console.log(count)
       }}>+</button>
 
-      <button onClick={function(){
-        setCount(count - 1)
-        console.log(count)
+      <button onClick={function () {
+        if (count > 0) {
+          setCount(count - 1)
+          console.log(count)
+          console.log('押せないよ～ん')
+        }
       }}>-</button>
     </>
   )
 }
 
-const CountPreview = function ({hoge}:{hoge:number}) {
+const CountPreview = function ({ hoge }: { hoge: number }) {
   return <div>count:{hoge}</div>
 }
 
