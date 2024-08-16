@@ -6,8 +6,8 @@ function App() {
   console.log(count)
   return (
     <>
-      <h1>Hello world</h1>
-
+      <h1>はろーわーるど！！！</h1>
+      
       <CountPreview hoge={count} />
       <button onClick={function(){
         setCount(count + 1)
