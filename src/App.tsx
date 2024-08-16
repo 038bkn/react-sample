@@ -24,7 +24,7 @@ function App() {
           setError('') // エラーメッセージをクリア
           console.log(count)
         } else {
-          setError('押せないよ～ん')
+          setError(prevError => prevError === '押せないよ～ん' ? 'ムリだって' : '押せないよ～ん')
         }
       }}>-</button>
 
